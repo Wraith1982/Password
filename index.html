@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<META CHARSET=UTF-8>
+<TITLE>Egzamin E.14</TITLE>
+<LINK href="style.css" REL="StyleSheet" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV ID=strona>
+	<DIV ID=naglowek align=center>
+	<h1>Weryfikacja jakości hasła</h1>
+	</DIV>
+	<DIV ID=menu>
+		<h3>Wybierz opcję</h3>
+		<UL>
+			<li><a href="index.html">Sprawdź hasło</a></li>
+			<li><a href="email.html">Sprawdź e-mail</a></li>
+			<li><a href="reguly.html">Reguły tworzenia hasła</a></li>
+		</UL>	
+	</DIV>
+	<DIV ID=sekcja2 align=center>
+		<br><br>
+		<script>
+		function sprawdz(){
+		var haslo=document.getElementById('haslo').value;
+		var wzor1= /([a-z]{1,}|[0-9]{1,}){7,}/gi;
+		var wzor2= /([a-z]{1,}|[0-9]{1,}){4,6}/gi;
+		
+		if(haslo=="")
+		document.getElementById('wynik').innerHTML="<span style='color:red;'>HASŁO JEST PUSTE</span>";
+		else if(wzor1.test(haslo))
+		document.getElementById('wynik').innerHTML="<span style='color:green;'>HASŁO JEST DOBRE</span><br>"; 
+		else if(wzor2.test(haslo))
+		document.getElementById('wynik').innerHTML="<span style='color:blue;'>HASŁO JEST ŚREDNIE</span><br>"; 
+		else 
+		document.getElementById('wynik').innerHTML="<span style='color:gold;'>HASŁO JEST SŁABE</span><br>";
+		
+		}
+		</script>
+		<form>
+		Wpisz hasło: <input type=password required placeholder="sprawdź hasło" name=haslo id=haslo>
+		<input type=button value="Weryfikuj" onClick="sprawdz();">
+		</form>
+		<br>
+		<div id=wynik> JAKOŚĆ HASŁA </div>
+		
+	</DIV>
+	<DIV ID=stopka align=right>
+	Wskaźnik jakości hasła
+	<br>PESEL: 
+	</DIV>
+</DIV>
+</BODY>
+</HTML>

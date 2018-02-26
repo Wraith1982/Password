@@ -1,0 +1,71 @@
+BODY {
+	margin:0px;
+}
+A {
+	color:#fff;
+}
+A:hover{ color:#333; }
+
+#strona {
+	position:relative; 
+	width:1000px; 
+	min-height:700px; 
+	padding:0px;
+	margin:0px;
+	margin-left:auto;
+	margin-right:auto;
+}
+#naglowek {
+	width:1000px; 
+	height:50px; 
+	padding:0px;
+	margin:0px;
+	background-color:#228164;
+	color:#fff;
+}
+#menu { 
+	width:300px; 
+	min-height:650px; 
+	padding:0px;
+	margin:0px;
+	float:left;
+	background-color:#34967B;
+	color:#000;
+}
+#sekcja2 {
+	width:700px; 
+	min-height:650px; 
+	padding:0px;
+	margin:0px;	
+	float:left;
+	background:#ADCEC4;
+	color:#000;
+}
+#stopka { 
+	width:1000px; 
+	height:40px; 
+	padding:0px;
+	margin:0px;
+	background-color:#228164;
+	color:#fff;
+	clear:both;
+}
+
+table {
+margin: 30px;
+border: 2px solid;
+width: 70%;
+}
+td, th {
+border: 2px solid;
+}
+th {
+background: #34967B;
+}
+tr:hover * {
+background: #228164;
+color: white;
+}
+p {
+margin: 30px;
+}

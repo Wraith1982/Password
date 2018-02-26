@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<META CHARSET=UTF-8>
+<TITLE>Egzamin E.14</TITLE>
+<LINK href="style.css" REL="StyleSheet" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV ID=strona>
+	<DIV ID=naglowek align=center>
+	<h1>Weryfikacja jakości hasła</h1>
+	</DIV>
+	<DIV ID=menu>
+		<h3>Wybierz opcję</h3>
+		<UL>
+			<li><a href="index.html">Sprawdź hasło</a></li>
+			<li><a href="email.html">Sprawdź e-mail</a></li>
+			<li><a href="reguly.html">Reguły tworzenia hasła</a></li>
+		</UL>	
+	</DIV>
+	<DIV ID=sekcja2 align=center>
+		<br><br>
+		<script>
+		function sprawdz(){
+		var email=document.getElementById('email').value;
+		var wzor= /^(.[A-Za-z0-9\-]*\w)+@+([A-Za-z0-9\-]*\w)+(\.[A-Za-z]{2,})+$/;
+
+		if(email=="")
+		document.getElementById('wynik').innerHTML="<span style='color:blue;'>PROSZĘ WPISAĆ E-MAIL</span>";
+		else if(wzor.test(email))
+		document.getElementById('wynik').innerHTML="<span style='color:green;'>E-MAIL:<b style='font-size:2em; color:#000;'> "+email+" </b>JEST POPRAWNY</span><br>"; 
+		else 
+		document.getElementById('wynik').innerHTML="<span style='color:red;'>E-MAIL:<b style='font-size:2em; color:#000;'> "+email+" </b>JEST NIEPOPRAWNY</span><br>";
+		}
+		</script>
+		<form class="form">
+	<div>
+        <label>E-mail</label>
+        <input type="email" required placeholder="sprawdź e-mail" id=email>
+		<input type=button value="Weryfikuj" onClick="sprawdz();">
+    </div>
+	</form>
+		<br>
+		<div id=wynik> </div>
+		
+	</DIV>
+	<DIV ID=stopka align=right>
+	Wskaźnik jakości hasła
+	<br>PESEL: 
+	</DIV>
+</DIV>
+</BODY>
+</HTML>

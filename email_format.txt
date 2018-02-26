@@ -1,0 +1,35 @@
+/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/
+
+
+/^([A-Za-z0-9\-]*\w)+@+([A-Za-z0-9\-]*\w)+(\.[A-Za-z]*\w)+$/
+Sprawdzone jak narazie wszystko dzia³a rewelacyjnie.
+
+/^(.[A-Za-z0-9\-]*\w)+@+([A-Za-z0-9\-]*\w)+(\.[A-Za-z]*\w)+$/
+a tak akceptuje jeszcze kropke w loginie
+
+
+
+function SprawdzEmail(AdresEmail)
+
+{
+
+	var TestEmail = /^([A-Za-z0-9]w*)@([A-Za-z0-9]w*(.[A-Za-z]w*)+)$/;
+
+	var Wynik = AdresEmail.match(TestEmail);
+
+
+	if (Wynik == null)
+
+	{
+
+		alert("Proszê wpisaæ poprawny adres e-mail!");
+
+		formularz.MAIL.value='';
+
+		return false;
+
+	}
+
+		return true;
+
+}
